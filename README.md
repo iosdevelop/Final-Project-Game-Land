@@ -4,8 +4,8 @@ December 5th Due Date
 
 Collaborators
 
-Sirena
-Arrow
+Sirena,
+Arrow,
 Daniel
 
 
