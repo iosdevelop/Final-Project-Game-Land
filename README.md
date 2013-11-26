@@ -9,6 +9,6 @@ Arrow,
 Daniel
 
 
-This is a quiz app using sqlite database.  Users will progress through 
+This is a quiz app using sqlite database.  Users will progress through each level 
 
 
