@@ -182,6 +182,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "cs@eku.edu";
+				TargetAttributes = {
+					3FFD7ACA183FC40600A2E6AC = {
+						DevelopmentTeam = W9364GZVPL;
+					};
+				};
 			};
 			buildConfigurationList = 3FFD7AC6183FC40600A2E6AC /* Build configuration list for PBXProject "HistoryInterfaceTeamProjectApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -314,9 +319,11 @@
 		3FFD7AEF183FC40700A2E6AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HistoryInterfaceTeamProjectApp/HistoryInterfaceTeamProjectApp-Prefix.pch";
 				INFOPLIST_FILE = "HistoryInterfaceTeamProjectApp/HistoryInterfaceTeamProjectApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -325,9 +332,11 @@
 		3FFD7AF0183FC40700A2E6AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HistoryInterfaceTeamProjectApp/HistoryInterfaceTeamProjectApp-Prefix.pch";
 				INFOPLIST_FILE = "HistoryInterfaceTeamProjectApp/HistoryInterfaceTeamProjectApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
