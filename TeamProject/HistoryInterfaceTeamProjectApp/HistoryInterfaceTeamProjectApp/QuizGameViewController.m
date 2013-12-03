@@ -29,58 +29,64 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self createDatabaseInstance];
+    [self createDatabaseInstance];
 	
-    rightAnswer = [[NSMutableArray alloc] init];
-    wrongAnswer = [[NSMutableArray alloc] init];
-    question = [[NSMutableArray alloc] init];
+    rightAnswer =   [[NSMutableArray alloc] init];
+    wrongAnswer =   [[NSMutableArray alloc] init];
+    question    =   [[NSMutableArray alloc] init];
     [self updateTable];
     
     
 }
-
+ //Finds the NSDocumentDirectory path of our app and puts it in an array.
 -(NSString *) dataFilePath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //Returns the file path. The index will always be 0.
     return [paths objectAtIndex:0];
 }
 
 -(void)updateTable
 {
     //this was clearing objects
-    //[list removeAllObjects];
-        FMDatabase *db = [FMDatabase databaseWithPath:[[self dataFilePath] stringByAppendingPathComponent:@"GameLand.sqlite"]];
+    [rightAnswer removeAllObjects];
+    [wrongAnswer removeAllObjects];
+    [question removeAllObjects];
+    
+    //this is the database declaration
+    FMDatabase *db = [FMDatabase databaseWithPath:[[self dataFilePath] stringByAppendingPathComponent:@"GameLand2.sqlite"]];
 
     
     [db open];
     
-    if ([question count] == 0 )
-    {
-        [db executeUpdate:@"DELETE FROM science"];
-    }
-    
-    [db executeUpdate:@"CREATE TABLE IF NOT EXISTS feathers (id INTEGER PRIMARY KEY, question TEXT)"];
-
-    [db executeUpdate:@"INSERT INTO featherb   (question) VALUES (?)", @"Purple"];
+//    if ([question count] == 0 )
+//    {
+//        [db executeUpdate:@"DELETE FROM science"];
+//    }
+//    
+//    [db executeUpdate:@"CREATE TABLE IF NOT EXISTS feathers (id INTEGER PRIMARY KEY, question TEXT)"];
+//
+//    [db executeUpdate:@"INSERT INTO feathers   (question) VALUES (?)", @"Purple"];
     
     //this is how to delete an entry from table
     //[db executeUpdate:@"DELETE FROM science WHERE  question = ?", @"Purple"];
     
     
     FMResultSet *scienceQuestions = [db executeQuery:@"SELECT * FROM science"];
-    FMResultSet *scienceAnswer = [db executeQuery:@"SELECT * FROM science"];
+    //FMResultSet *scienceAnswer = [db executeQuery:@"SELECT * FROM science"];
     
+      //Adds the information from the database to our scienceQuestions array.
     while ([scienceQuestions next])
     {
         [question addObject:[scienceQuestions stringForColumn:@"question"]];
         
     }
     
-    while ([scienceAnswer next])
-    {
-        [rightAnswer addObject:[scienceAnswer stringForColumn:@"rightAnswer"]];
-        
-    }
+//    while ([scienceAnswer next])
+//    {
+//        [rightAnswer addObject:[scienceAnswer stringForColumn:@"rightAnswer"]];
+//        
+//    }
     
     [db close];
     
@@ -113,7 +119,7 @@
 {
     
         //create another reference to database
-        FMDatabase *db = [FMDatabase databaseWithPath:[[self dataFilePath] stringByAppendingPathComponent:@"GameLand.sqlite"]];
+        //FMDatabase *db = [FMDatabase databaseWithPath:[[self dataFilePath] stringByAppendingPathComponent:@"GameLand2.sqlite"]];
     
     
 //    if ([buttonAnswer isSelected]) {
@@ -122,7 +128,7 @@
    
     
     //enter score into database after getting correct answer
-    [db executeUpdate:@"INSERT INTO science (rightScore) VALUES (?)", @"1"];
+    //[db executeUpdate:@"INSERT INTO science (rightScore) VALUES (?)", @"1"];
     
 }
 
@@ -132,7 +138,7 @@
 -(NSString*)documentDirectoryDatabaseLocation
 {
     NSArray *documentDirectoryFolderLocation = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    return [[documentDirectoryFolderLocation objectAtIndex:0] stringByAppendingPathComponent:@"GameLand.sqlite"];
+    return [[documentDirectoryFolderLocation objectAtIndex:0] stringByAppendingPathComponent:@"GameLand2.sqlite"];
 }
 
 //copyes the database from the Project bundle to the documetn directory
@@ -141,7 +147,7 @@
     //if sqlite file does not exists at the document dir then create it
     if(![[NSFileManager defaultManager] fileExistsAtPath:[self documentDirectoryDatabaseLocation]])
     {
-        NSString *bundlePathofDatabase = [[NSBundle mainBundle] pathForResource:@"GameLand" ofType:@"sqlite"];
+        NSString *bundlePathofDatabase = [[NSBundle mainBundle] pathForResource:@"GameLand2" ofType:@"sqlite"];
         if (bundlePathofDatabase.length!=0)
         {
             NSString *docdirLocation = [self documentDirectoryDatabaseLocation];
@@ -171,35 +177,16 @@
         NSLog(@"DB copying failed");
     }
 }
+
+- (IBAction)keyboard:(id)sender
+{
+    //The first responder is the keyboard.
+    [sender resignFirstResponder];
+}
+
+
+
+
 @end
 
-
-
-
-
-
-
-////table view
-//-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return [list count];
-//}
-//
-////I was using a table view and writing to each cell
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *cellID = @"myCell";
-//
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-//
-//    if (cell==nil)
-//    {
-//        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-//    }
-//
-//    cell.textLabel.text=[list objectAtIndex:indexPath.row];
-//
-//    return cell;
-//
-//}
 

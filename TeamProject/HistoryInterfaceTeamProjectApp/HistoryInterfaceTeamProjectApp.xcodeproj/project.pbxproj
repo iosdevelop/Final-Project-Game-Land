@@ -18,13 +18,13 @@
 		3FFD7AE5183FC40600A2E6AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFD7AE4183FC40600A2E6AC /* Default-568h@2x.png */; };
 		3FFD7AE8183FC40600A2E6AC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFD7AE6183FC40600A2E6AC /* MainStoryboard.storyboard */; };
 		3FFD7AEB183FC40700A2E6AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD7AEA183FC40700A2E6AC /* ViewController.m */; };
-		F90DDA4E18411B5C005549FB /* GameLand.sql in Resources */ = {isa = PBXBuildFile; fileRef = F90DDA4D18411B5C005549FB /* GameLand.sql */; };
 		F90DDAF51842B6C0005549FB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F90DDAEB1842B6C0005549FB /* FMDatabase.m */; };
 		F90DDAF61842B6C0005549FB /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F90DDAED1842B6C0005549FB /* FMDatabaseAdditions.m */; };
 		F90DDAF71842B6C0005549FB /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F90DDAEF1842B6C0005549FB /* FMDatabasePool.m */; };
 		F90DDAF81842B6C0005549FB /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F90DDAF11842B6C0005549FB /* FMDatabaseQueue.m */; };
 		F90DDAFA1842B6C0005549FB /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F90DDAF41842B6C0005549FB /* FMResultSet.m */; };
 		F90DDAFD1842B74C005549FB /* QuizGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90DDAFC1842B74C005549FB /* QuizGameViewController.m */; };
+		F921DF9E18451A7800B0C789 /* GameLand.sql in Resources */ = {isa = PBXBuildFile; fileRef = F921DF9D18451A7800B0C789 /* GameLand.sql */; };
 		F95E2E1A1843439C00EA108C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F95E2E191843439C00EA108C /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,7 @@
 		3FFD7AE7183FC40600A2E6AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3FFD7AE9183FC40700A2E6AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3FFD7AEA183FC40700A2E6AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F90DDA4D18411B5C005549FB /* GameLand.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GameLand.sql; path = ../../../GameLand.sql; sourceTree = "<group>"; };
+		F90B4B3D184E66D400677781 /* GameLand2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameLand2.sqlite; sourceTree = "<group>"; };
 		F90DDAEA1842B6C0005549FB /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		F90DDAEB1842B6C0005549FB /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		F90DDAEC1842B6C0005549FB /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -58,8 +58,9 @@
 		F90DDAF41842B6C0005549FB /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		F90DDAFB1842B74C005549FB /* QuizGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizGameViewController.h; sourceTree = "<group>"; };
 		F90DDAFC1842B74C005549FB /* QuizGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizGameViewController.m; sourceTree = "<group>"; };
+		F921DF9D18451A7800B0C789 /* GameLand.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GameLand.sql; sourceTree = "<group>"; };
+		F921DF9F18451AA600B0C789 /* GameLand.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameLand.sqlite; sourceTree = "<group>"; };
 		F95E2E191843439C00EA108C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		F95E2E1C1843DBA500EA108C /* GameLand.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameLand.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +125,11 @@
 		3FFD7AD5183FC40600A2E6AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F90B4B3D184E66D400677781 /* GameLand2.sqlite */,
 				3FFD7AD6183FC40600A2E6AC /* HistoryInterfaceTeamProjectApp-Info.plist */,
-				F95E2E1C1843DBA500EA108C /* GameLand.sqlite */,
 				3FFD7AD7183FC40600A2E6AC /* InfoPlist.strings */,
-				F90DDA4D18411B5C005549FB /* GameLand.sql */,
+				F921DF9F18451AA600B0C789 /* GameLand.sqlite */,
+				F921DF9D18451A7800B0C789 /* GameLand.sql */,
 				3FFD7ADA183FC40600A2E6AC /* main.m */,
 				3FFD7ADC183FC40600A2E6AC /* HistoryInterfaceTeamProjectApp-Prefix.pch */,
 				3FFD7AE0183FC40600A2E6AC /* Default.png */,
@@ -213,7 +215,7 @@
 				3FFD7AD9183FC40600A2E6AC /* InfoPlist.strings in Resources */,
 				3FFD7AE1183FC40600A2E6AC /* Default.png in Resources */,
 				3FFD7AE3183FC40600A2E6AC /* Default@2x.png in Resources */,
-				F90DDA4E18411B5C005549FB /* GameLand.sql in Resources */,
+				F921DF9E18451A7800B0C789 /* GameLand.sql in Resources */,
 				3FFD7AE5183FC40600A2E6AC /* Default-568h@2x.png in Resources */,
 				3FFD7AE8183FC40600A2E6AC /* MainStoryboard.storyboard in Resources */,
 			);

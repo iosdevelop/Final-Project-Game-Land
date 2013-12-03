@@ -15,14 +15,13 @@
     NSMutableArray *question;
 }
 
-//@property (weak, nonatomic) IBOutlet UITableView *table;
-@property (weak, nonatomic) IBOutlet UIButton *rightAnswerbutton;
 
 
 - (IBAction)checkAnswer:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *quizCard;
 @property (weak, nonatomic) IBOutlet UIButton *wrongAnswerButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightAnswerbutton;
 
-//- (IBAction)keyboard:(id)sender;
+- (IBAction)keyboard:(id)sender;
 
 @end
