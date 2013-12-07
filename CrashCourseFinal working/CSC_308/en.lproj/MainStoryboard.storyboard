@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XFU-OO-RiM">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Category-->
+        <scene sceneID="f5n-25-QpA">
+            <objects>
+                <viewController storyboardIdentifier="CategoryView" title="Category Scene" id="ifN-xH-aqP" userLabel="Category" customClass="Category_ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flh-M2-dXa"/>
+                        <viewControllerLayoutGuide type="bottom" id="r0r-ro-EdQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dTZ-q6-0d0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="backgroundfrApp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-2x-UIg">
+                                <rect key="frame" x="0.0" y="19" width="320" height="461"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="461" id="0uM-q1-458"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Correctly answer question from each category to pass this grade level. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="285" translatesAutoresizingMaskIntoConstraints="NO" id="2c1-LY-bzl">
+                                <rect key="frame" x="20" y="20" width="285" height="71"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEP-vl-niL">
+                                <rect key="frame" x="141" y="170" width="154" height="44"/>
+                                <state key="normal" title="MATH" backgroundImage="mpic.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="catagorySelected:" destination="ifN-xH-aqP" eventType="touchUpInside" id="9t6-ax-It7"/>
+                                    <segue destination="diA-dT-Rwt" kind="modal" identifier="toQuestions" id="9IO-Ln-Mqt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK2-er-btc">
+                                <rect key="frame" x="141" y="222" width="154" height="44"/>
+                                <state key="normal" title="HISTORY" backgroundImage="hpic.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="catagorySelected:" destination="ifN-xH-aqP" eventType="touchUpInside" id="MRl-96-C15"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyN-Ch-ymm">
+                                <rect key="frame" x="141" y="274" width="154" height="44"/>
+                                <state key="normal" title="SCIENCE" backgroundImage="sbutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="catagorySelected:" destination="ifN-xH-aqP" eventType="touchUpInside" id="fjv-Dl-lBf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-cp-swJ">
+                                <rect key="frame" x="141" y="326" width="154" height="44"/>
+                                <state key="normal" title="LANGUAGE ARTS" backgroundImage="epic.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="catagorySelected:" destination="ifN-xH-aqP" eventType="touchUpInside" id="Wtn-HM-QO8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Current Grade:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="231" translatesAutoresizingMaskIntoConstraints="NO" id="RRb-XQ-mhf" userLabel="Grade_At">
+                                <rect key="frame" x="20" y="106" width="231" height="56"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Grade:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqO-Bj-RHY" userLabel="Math_GPA">
+                                <rect key="frame" x="25" y="183" width="90" height="21"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Grade:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnX-hG-BS7" userLabel="History_GPA">
+                                <rect key="frame" x="25" y="234" width="90" height="21"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Grade:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2Z-hC-i9e" userLabel="Sic_GPA">
+                                <rect key="frame" x="25" y="287" width="90" height="21"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Grade:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msJ-Yd-1bV">
+                                <rect key="frame" x="25" y="337" width="90" height="21"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEG-vE-Gra">
+                                <rect key="frame" x="148" y="438" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="IXs-qP-BjD"/>
+                                </constraints>
+                                <state key="normal" title="Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHome:" destination="ifN-xH-aqP" eventType="touchUpInside" id="Ivk-vZ-WEN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cYm-2x-UIg" firstAttribute="leading" secondItem="dTZ-q6-0d0" secondAttribute="leading" id="D3B-Tt-itd"/>
+                            <constraint firstItem="YEG-vE-Gra" firstAttribute="leading" secondItem="dTZ-q6-0d0" secondAttribute="leading" constant="148" id="GGF-k6-5Ye"/>
+                            <constraint firstAttribute="bottom" secondItem="YEG-vE-Gra" secondAttribute="bottom" constant="12" id="OR4-Cb-slZ"/>
+                            <constraint firstItem="cYm-2x-UIg" firstAttribute="trailing" secondItem="dTZ-q6-0d0" secondAttribute="trailing" id="Vc5-at-FXD"/>
+                            <constraint firstItem="cYm-2x-UIg" firstAttribute="bottom" secondItem="dTZ-q6-0d0" secondAttribute="bottom" id="wlT-48-9fZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A30-1A-RD7"/>
+                    <connections>
+                        <outlet property="currentGrade" destination="RRb-XQ-mhf" id="PhZ-Ay-wWP"/>
+                        <outlet property="grade1" destination="wqO-Bj-RHY" id="x8c-LI-aiC"/>
+                        <outlet property="grade2" destination="UnX-hG-BS7" id="Vja-b2-pTO"/>
+                        <outlet property="grade3" destination="G2Z-hC-i9e" id="s4Z-LC-Dht"/>
+                        <outlet property="grade4" destination="msJ-Yd-1bV" id="x5Z-GZ-0Ut"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCg-wI-tn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="-659"/>
+        </scene>
+        <!--Question-->
+        <scene sceneID="zMm-1t-msE">
+            <objects>
+                <viewController restorationIdentifier="" storyboardIdentifier="QuestionScence" title="Question Scene" id="diA-dT-Rwt" userLabel="Question" customClass="Question" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VQb-Vo-SZB"/>
+                        <viewControllerLayoutGuide type="bottom" id="XWo-yD-eQZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wt6-CI-YJh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="backgroundfrMath.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HNm-CB-JBc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="chalkb.png" translatesAutoresizingMaskIntoConstraints="NO" id="sT6-l4-O2r">
+                                <rect key="frame" x="14" y="7" width="292" height="140"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label dffdgg sd dw " lineBreakMode="wordWrap" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="265" translatesAutoresizingMaskIntoConstraints="NO" id="b0h-ny-ZJr" userLabel="Math_Question_Label">
+                                <rect key="frame" x="28" y="14" width="265" height="125"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" red="0.9960784912109375" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Tdo-9F-bqW" userLabel="Ans_1">
+                                <rect key="frame" x="6" y="147" width="307" height="85"/>
+                                <state key="normal" title="Button" backgroundImage="trythisfirst.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="diA-dT-Rwt" eventType="touchUpInside" id="zk5-cH-r1e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kbB-XY-kEC" userLabel="Ans_2">
+                                <rect key="frame" x="6" y="233" width="307" height="85"/>
+                                <state key="normal" title="Button" backgroundImage="trythisfirst.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="diA-dT-Rwt" eventType="touchUpInside" id="1Kv-sI-u54"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iSY-uV-ftt" userLabel="Ans_3">
+                                <rect key="frame" x="6" y="317" width="307" height="85"/>
+                                <state key="normal" title="Button" backgroundImage="trythisfirst.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="diA-dT-Rwt" eventType="touchUpInside" id="CPC-2i-iPE"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iI0-6e-YSW">
+                                <rect key="frame" x="20" y="426" width="273" height="2"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-xg-TCF">
+                                <rect key="frame" x="59" y="431" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljg-Ms-IQ6">
+                                <rect key="frame" x="115" y="431" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-EN-jil">
+                                <rect key="frame" x="165" y="431" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqA-pJ-6Ez">
+                                <rect key="frame" x="220" y="431" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNL-FR-WPr">
+                                <rect key="frame" x="274" y="431" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Your current grade in this category is:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iR-W4-kli">
+                                <rect key="frame" x="10" y="402" width="292" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerA" destination="Tdo-9F-bqW" id="IV0-AZ-Cew"/>
+                        <outlet property="answerB" destination="kbB-XY-kEC" id="ecR-Si-ntp"/>
+                        <outlet property="answerC" destination="iSY-uV-ftt" id="HHf-Is-LRf"/>
+                        <outlet property="backgroundControl" destination="HNm-CB-JBc" id="lnV-ma-eFD"/>
+                        <outlet property="progress" destination="iI0-6e-YSW" id="AFT-dW-36Q"/>
+                        <outlet property="questionLabel" destination="b0h-ny-ZJr" id="Ae5-1D-Jdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOO-bE-UCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533" y="-645"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ACy-Rg-DeU">
+            <objects>
+                <viewController storyboardIdentifier="HomeScene" title="Home Scene" id="XFU-OO-RiM" userLabel="Home" customClass="Main_ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vry-cQ-UMV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ehp-79-U5F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wot-Iu-a48">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="school-house-clipart1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-kb-Keo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucc-vO-894">
+                                <rect key="frame" x="20" y="353" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8Fm-ec-p8Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="1">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="ifN-xH-aqP" kind="modal" identifier="toCatagories" id="A8h-6s-Rwy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bx2-7z-tYN">
+                                <rect key="frame" x="91" y="398" width="70" height="70"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="uNH-iv-Qm1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="2">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDh-Rj-hjf">
+                                <rect key="frame" x="239" y="353" width="70" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="4">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuP-Ky-X9y">
+                                <rect key="frame" x="169" y="398" width="70" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="3">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72Z-ga-s6O">
+                                <rect key="frame" x="239" y="275" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="33u-lR-xvD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="5">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2b-2e-Hbr">
+                                <rect key="frame" x="177" y="210" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="UCP-On-dQG"/>
+                                    <constraint firstAttribute="height" constant="70" id="liH-gX-qw8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="6">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npb-wa-ece">
+                                <rect key="frame" x="78" y="201" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="VkT-DZ-fJB"/>
+                                    <constraint firstAttribute="height" constant="70" id="dYQ-To-Pjt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="7">
+                                            <attributes>
+                                                <color key="NSColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBA-Pq-u2L">
+                                <rect key="frame" x="20" y="156" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="IsZ-zc-z8X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="8">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkg-A7-iPY">
+                                <rect key="frame" x="20" y="78" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="BFC-ch-WYg"/>
+                                    <constraint firstAttribute="width" constant="70" id="mm6-Fd-LeX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="9">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axq-e3-vgy">
+                                <rect key="frame" x="91" y="25" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="YsY-0Y-M0n"/>
+                                    <constraint firstAttribute="height" constant="70" id="xWZ-P9-UpO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="10">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard-Bold"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNn-Ub-04A">
+                                <rect key="frame" x="239" y="78" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="mPw-nI-Lkv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="12">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Erg-s6-t0g">
+                                <rect key="frame" x="169" y="41" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9mc-VB-eH8"/>
+                                    <constraint firstAttribute="width" constant="70" id="bFX-sU-JXh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="-13" maxY="0.0"/>
+                                <state key="normal" backgroundImage="gradebutton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="11">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99215692281723022" green="0.99215692281723022" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                                <font key="NSFont" size="33" name="Chalkboard"/>
+                                                <font key="NSOriginalFont" size="33" name="Chalkboard"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bx2-7z-tYN" secondAttribute="bottom" constant="12" id="0uZ-Wi-4A2"/>
+                            <constraint firstItem="fOS-kb-Keo" firstAttribute="top" secondItem="wot-Iu-a48" secondAttribute="top" id="2AC-Xi-nLd"/>
+                            <constraint firstItem="72Z-ga-s6O" firstAttribute="leading" secondItem="cNn-Ub-04A" secondAttribute="leading" id="3J1-vi-gLy"/>
+                            <constraint firstItem="axq-e3-vgy" firstAttribute="top" secondItem="wot-Iu-a48" secondAttribute="top" constant="25" id="4Tn-8l-TrS"/>
+                            <constraint firstItem="cNn-Ub-04A" firstAttribute="trailing" secondItem="72Z-ga-s6O" secondAttribute="trailing" id="8We-fl-9sQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ucc-vO-894" secondAttribute="bottom" constant="57" id="Bm5-L2-eEa"/>
+                            <constraint firstItem="axq-e3-vgy" firstAttribute="leading" secondItem="wot-Iu-a48" secondAttribute="leading" constant="91" id="ENY-ad-bI8"/>
+                            <constraint firstItem="Erg-s6-t0g" firstAttribute="trailing" secondItem="wuP-Ky-X9y" secondAttribute="trailing" id="EPB-c2-qyK"/>
+                            <constraint firstItem="fOS-kb-Keo" firstAttribute="bottom" secondItem="wot-Iu-a48" secondAttribute="bottom" id="FWa-c0-b5i"/>
+                            <constraint firstItem="ucc-vO-894" firstAttribute="bottom" secondItem="wDh-Rj-hjf" secondAttribute="bottom" id="FeQ-f2-rFs"/>
+                            <constraint firstItem="npb-wa-ece" firstAttribute="leading" secondItem="wot-Iu-a48" secondAttribute="leading" constant="78" id="I6Y-xe-2gP"/>
+                            <constraint firstItem="Nkg-A7-iPY" firstAttribute="top" secondItem="cNn-Ub-04A" secondAttribute="top" id="ISo-gS-X5k"/>
+                            <constraint firstItem="ucc-vO-894" firstAttribute="top" secondItem="wDh-Rj-hjf" secondAttribute="top" id="Mw1-hb-h1I"/>
+                            <constraint firstItem="wuP-Ky-X9y" firstAttribute="bottom" secondItem="bx2-7z-tYN" secondAttribute="bottom" id="NLd-h1-iFq"/>
+                            <constraint firstItem="Erg-s6-t0g" firstAttribute="leading" secondItem="axq-e3-vgy" secondAttribute="trailing" constant="8" symbolic="YES" id="Nlz-9J-otT"/>
+                            <constraint firstItem="npb-wa-ece" firstAttribute="top" secondItem="wot-Iu-a48" secondAttribute="top" constant="201" id="Ph8-6p-xG9"/>
+                            <constraint firstItem="wuP-Ky-X9y" firstAttribute="leading" secondItem="bx2-7z-tYN" secondAttribute="trailing" constant="8" symbolic="YES" id="PqH-Oe-Wh2"/>
+                            <constraint firstItem="wuP-Ky-X9y" firstAttribute="leading" secondItem="Erg-s6-t0g" secondAttribute="leading" id="QnS-C7-0Yy"/>
+                            <constraint firstItem="l2b-2e-Hbr" firstAttribute="top" secondItem="wot-Iu-a48" secondAttribute="top" constant="210" id="WCa-vu-lUy"/>
+                            <constraint firstItem="BBA-Pq-u2L" firstAttribute="top" secondItem="Nkg-A7-iPY" secondAttribute="bottom" constant="8" symbolic="YES" id="WSo-nd-2j6"/>
+                            <constraint firstItem="cNn-Ub-04A" firstAttribute="bottom" secondItem="Nkg-A7-iPY" secondAttribute="bottom" id="X7k-aV-wq3"/>
+                            <constraint firstItem="axq-e3-vgy" firstAttribute="leading" secondItem="bx2-7z-tYN" secondAttribute="leading" id="XUT-j5-v6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="cNn-Ub-04A" secondAttribute="trailing" constant="11" id="cgO-gI-fp0"/>
+                            <constraint firstItem="Erg-s6-t0g" firstAttribute="top" secondItem="wot-Iu-a48" secondAttribute="top" constant="41" id="eCD-sZ-1nl"/>
+                            <constraint firstItem="fOS-kb-Keo" firstAttribute="trailing" secondItem="wot-Iu-a48" secondAttribute="trailing" id="ekW-gB-snz"/>
+                            <constraint firstItem="wDh-Rj-hjf" firstAttribute="top" secondItem="72Z-ga-s6O" secondAttribute="bottom" constant="8" symbolic="YES" id="hG1-c3-Ur3"/>
+                            <constraint firstItem="Nkg-A7-iPY" firstAttribute="top" secondItem="wot-Iu-a48" secondAttribute="top" constant="78" id="hMp-7l-bnZ"/>
+                            <constraint firstAttribute="trailing" secondItem="l2b-2e-Hbr" secondAttribute="trailing" constant="73" id="kFq-YG-7fh"/>
+                            <constraint firstItem="72Z-ga-s6O" firstAttribute="trailing" secondItem="wDh-Rj-hjf" secondAttribute="trailing" id="mYe-ry-fWM"/>
+                            <constraint firstItem="ucc-vO-894" firstAttribute="leading" secondItem="wot-Iu-a48" secondAttribute="leading" constant="20" symbolic="YES" id="obD-ed-dp5"/>
+                            <constraint firstItem="bx2-7z-tYN" firstAttribute="top" secondItem="wuP-Ky-X9y" secondAttribute="top" id="ocK-iY-y4i"/>
+                            <constraint firstItem="Nkg-A7-iPY" firstAttribute="leading" secondItem="wot-Iu-a48" secondAttribute="leading" constant="20" symbolic="YES" id="phM-LN-H7c"/>
+                            <constraint firstItem="BBA-Pq-u2L" firstAttribute="trailing" secondItem="Nkg-A7-iPY" secondAttribute="trailing" id="u6u-td-l8V"/>
+                            <constraint firstItem="72Z-ga-s6O" firstAttribute="leading" secondItem="wDh-Rj-hjf" secondAttribute="leading" id="vf0-xs-jm5"/>
+                            <constraint firstItem="fOS-kb-Keo" firstAttribute="leading" secondItem="wot-Iu-a48" secondAttribute="leading" id="vhc-O9-y5m"/>
+                            <constraint firstItem="BBA-Pq-u2L" firstAttribute="leading" secondItem="wot-Iu-a48" secondAttribute="leading" constant="20" symbolic="YES" id="wpd-ek-Zkl"/>
+                            <constraint firstItem="BBA-Pq-u2L" firstAttribute="trailing" secondItem="ucc-vO-894" secondAttribute="trailing" id="ygl-99-2uk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="grade1" destination="ucc-vO-894" id="sQg-EZ-14d"/>
+                        <outlet property="grade10" destination="axq-e3-vgy" id="Nee-u3-xDD"/>
+                        <outlet property="grade11" destination="Erg-s6-t0g" id="4Lu-1t-KAi"/>
+                        <outlet property="grade12" destination="cNn-Ub-04A" id="xZ7-gu-uMJ"/>
+                        <outlet property="grade2" destination="bx2-7z-tYN" id="fyh-63-1Ly"/>
+                        <outlet property="grade3" destination="wuP-Ky-X9y" id="SXg-HB-cOw"/>
+                        <outlet property="grade4" destination="wDh-Rj-hjf" id="gGj-YY-c1V"/>
+                        <outlet property="grade5" destination="72Z-ga-s6O" id="Hzm-FG-V7g"/>
+                        <outlet property="grade6" destination="l2b-2e-Hbr" id="eWI-e1-3ek"/>
+                        <outlet property="grade7" destination="npb-wa-ece" id="d62-Ui-SQI"/>
+                        <outlet property="grade8" destination="BBA-Pq-u2L" id="mBG-E9-G5Y"/>
+                        <outlet property="grade9" destination="Nkg-A7-iPY" id="vVo-9p-aip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ntD-44-AOg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1734" y="-659"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundfrApp.jpg" width="400" height="600"/>
+        <image name="backgroundfrMath.jpg" width="400" height="600"/>
+        <image name="chalkb.png" width="275" height="183"/>
+        <image name="epic.png" width="300" height="300"/>
+        <image name="gradebutton.png" width="237" height="219"/>
+        <image name="hpic.png" width="300" height="300"/>
+        <image name="mpic.png" width="300" height="300"/>
+        <image name="sbutton.png" width="300" height="300"/>
+        <image name="school-house-clipart1.png" width="500" height="505"/>
+        <image name="trythisfirst.png" width="400" height="300"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
