@@ -16,5 +16,7 @@ There is a problem with the MainStoryBoard which was designd in Xcode 5.0.2.  I 
 it is not working.  Sorry about this.s
 
 
+Will add Database functionality soon!
+
 
 
